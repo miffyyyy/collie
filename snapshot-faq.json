@@ -1,0 +1,14 @@
+{
+  "data": [
+        {
+      "id": "s1",
+      "question": "Token type: ERC20. I want to know how to set up a strategy that takes the cube root of a user's {T} token balance as voting score. I want users who hold cube root of {T} token balance as voting score.",
+      "answer": "https://snapshot.org/#/strategy/math example:```{\n  \"symbol\": \"MATH\",\n  \"operands\": [\n    {\n      \"type\": \"strategy\",\n      \"strategy\": {\n        \"name\": \"erc20-balance-of\",\n        \"network\": \"1\",\n        \"params\": {\n          \"address\": \"<address of {T}>\",\n          \"symbol\": \"{T}\",\n          \"decimals\": 18\n        }\n      }\n    }\n  ],\n  \"operation\": \"square-root\"\n}```"
+        },
+      {
+      "id": "s2",
+      "question": "Token type: ERC1551. I want to know how to set up a strategy that takes the cube root of a user's {T} balance as voting score. I want users who hold cube root of {T} balance as voting score.",
+      "answer": "https://snapshot.org/#/strategy/math example:```{\n  \"symbol\": \"MATH\",\n  \"operands\": [\n    {\n      \"type\": \"strategy\",\n      \"strategy\": {\n        \"name\": \"erc1551-balance-of\",\n        \"network\": \"1\",\n        \"params\": {\n          \"address\": \"<address of {T}>\",\n          \"symbol\": \"{T}\",\n          \"decimals\": 18\n        }\n      }\n    }\n  ],\n  \"operation\": \"square-root\"\n}```"
+        }
+  ]
+}
